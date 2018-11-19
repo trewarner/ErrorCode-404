@@ -1,8 +1,9 @@
-code = str(input("Input your code: "))
-print("Your program is:")
-print(code)
+
+
+
 
 def analyze(code):
+    code = code.strip()
     if code.startswith("def"):
         if not (code[-1]==':'):
             print ("ERROR: Missing colon.")
@@ -40,3 +41,16 @@ def analyze(code):
             print ("No colon errors detected.")
     else:
         print ("No colon errors detected.")
+
+
+
+filepath = input("Input program file name: ")
+
+with open(filepath) as fp:
+   line = fp.readline()
+   cnt = 1
+   while line:
+       print("Line {}: {}".format(cnt, line))
+       analyze(line)
+       line = fp.readline()
+       cnt += 1
