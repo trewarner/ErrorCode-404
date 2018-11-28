@@ -42,7 +42,15 @@ def analyze(code):
     else:
         print ("No colon errors detected.")
 
+open = (code).count('(')
+closed = (code).count(')')
 
+if open == closed:
+    print ("No parentheses/brackets errors deteced.")
+elif open > closed:
+    print ("There are more open parentheses/brackets than closed parentheses/brackets.")
+elif open < closed:
+    print ("There are more closed parentheses/brackets than open parentheses/brackets.")
 
 filepath = input("Input program file name: ")
 
