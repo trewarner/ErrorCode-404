@@ -6,3 +6,6 @@ def buggy()
     print(that's nice"
   else
     print("I don't know what you mean...")
+
+    if [1+2+3] = [6:
+        return {str
