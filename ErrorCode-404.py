@@ -41,13 +41,14 @@ def analyze(code):
     closed = closedPar + closedBra + closedCur
 
     if open > closed:
-        print ("There are more open parentheses/brackets than closed parentheses/brackets.")
+        print ("ERROR: There are more open parentheses/brackets than closed parentheses/brackets.")
     elif open < closed:
-        print ("There are more closed parentheses/brackets than open parentheses/brackets.")
+        print ("ERROR: There are more closed parentheses/brackets than open parentheses/brackets.")
 
     quotes = (code).count('"')
 
-    if (quotes)%2!=0
+    if (quotes)%2!=0:
+        print ("ERROR: There is an uneven amount of quotes in this line.")
 
 filepath = input("Input program file name: ")
 
