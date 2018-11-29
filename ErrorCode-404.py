@@ -26,13 +26,28 @@ def analyze(code):
         if not (code[-1]==':'):
             print ("ERROR: Missing colon.")
 
-    open = (code).count('(')
-    closed = (code).count(')')
+# Par = parentheses
+# Bra = brackets
+# Cur = curly braces
+
+    openPar = (code).count('(')
+    closedPar = (code).count(')')
+    openBra = (code).count('[')
+    closedBra = (code).count(']')
+    openCur = (code).count('{')
+    closedCur = (code).count('}')
+
+    open = openPar + openBra + openCur
+    closed = closedPar + closedBra + closedCur
 
     if open > closed:
         print ("There are more open parentheses/brackets than closed parentheses/brackets.")
     elif open < closed:
         print ("There are more closed parentheses/brackets than open parentheses/brackets.")
+
+    quotes = (code).count('"')
+
+    if (quotes)%2!=0
 
 filepath = input("Input program file name: ")
 
