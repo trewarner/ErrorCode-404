@@ -33,7 +33,7 @@ def analyze(code):
         print ("There are more open parentheses/brackets than closed parentheses/brackets.")
     elif open < closed:
         print ("There are more closed parentheses/brackets than open parentheses/brackets.")
-
+    
 filepath = input("Input program file name: ")
 
 with open(filepath) as fp:
