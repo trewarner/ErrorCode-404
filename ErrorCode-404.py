@@ -1,4 +1,4 @@
-#This Code Will Help You Delect Errors In Your Code 
+#This Code Will Help You Delect Errors In Your Code
 def analyze(code):
     code = code.strip()
     if code.startswith("def"):
