@@ -50,7 +50,7 @@ def analyze(code):
     singlequotes = (code).count("'")
 
     if (singlequotes)%2!=0:
-        print ("ERROR: There is an uneven amount of single quotes in this line.")
+        print ("ERROR: There is an uneven amount of single quotes in this line, double check this line for errors.")
 
 filepath = input("Input program file name: ")
 
