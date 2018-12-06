@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="bg-primary">Buggy Code!</h1>
+
+<ol>
+{% for review in reviews %}
+<li>
+submitted:{{review.time}} <br>
+<pre class="bg-info">
+{{review.code}}
+</pre>
+<pre>
+  {% for line in review.debug %}
+  {{line.code}} <span class="bg-danger">{{line.error}}</span><br>
+  {% endfor %}
+</pre>
+<div class="bg-danger">
+  {{review.bug}}
+</div>
+</li>
+{% endfor %}
+</ol>
+
+{% endblock %}

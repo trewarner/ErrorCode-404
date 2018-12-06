@@ -52,13 +52,17 @@ def analyze(code):
     if (singlequotes)%2!=0:
         print ("ERROR: There is an uneven amount of single quotes in this line, double check this line for errors.")
 
-filepath = input("Input program file name: ")
 
-with open(filepath) as fp:
-   line = fp.readline()
-   cnt = 1
-   while line:
-       print("Line {}: {}".format(cnt, line))
-       analyze(line)
+
+if __name__ == '__main__':
+    #app.run('0.0.0.0',port=5100)  # production
+    filepath = input("Input program file name: ")
+
+    with open(filepath) as fp:
        line = fp.readline()
-       cnt += 1
+       cnt = 1
+       while line:
+           print("Line {}: {}".format(cnt, line))
+           analyze(line)
+           line = fp.readline()
+           cnt += 1

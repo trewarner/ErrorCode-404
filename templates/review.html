@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+  <h1>Debugging window</h1>
+    <p class="text-warning">
+      Make a review!
+    </p>
+</div>
+
+
+
+<form method="POST" action="/review" style="background-color: #e8e8e8; width: 50%; position: relative; border: 25px solid transparent; margin: auto; padding: 15px; text-align: center; border-radius: 10px;">
+
+  <h2>Enter your code below</h2>
+  <textarea
+      class="form-control"
+      name="code"
+      rows="4"
+      style="resize: vertical;"
+      cols="40"
+      maxlength="140"></textarea>
+
+
+
+  <!-- class="text-center" -->
+  <h2>What kind of bug is there?</h2>
+  <textarea
+      class="form-control"
+      name="bug"
+      rows="4"
+      style="resize: vertical;"
+      cols="40"
+      maxlength="140"></textarea>
+
+  <br>
+  <input type="submit">
+
+
+</form>
+
+<br><br>
+
+
+{% endblock %}
