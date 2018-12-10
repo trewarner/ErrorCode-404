@@ -162,6 +162,19 @@ def person1():
     return render_template('person1.html')
 
 
+@app.route('/person2')
+def person2():
+    return render_template('person2.html')
+
+@app.route('/person3')
+def person3():
+    return render_template('person3.html')
+
+@app.route('/person4')
+def person4():
+    return render_template('person4.html')
+
+
 #This Code Will Help You Delect Errors In Your Code
 def analyze(code):
     code = code.strip()
